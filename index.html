@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Laws in the Philippines - Timeline</title>
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --text-light: #E0E0E0;
+            --accent-color: #2C3E50;
+            --highlight-color: #34495E;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        .title {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2.5em;
+            color: var(--text-light);
+            border-bottom: 2px solid var(--accent-color);
+            margin-bottom: 30px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background-color: var(--accent-color);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 10px 40px;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        .year-btn {
+            background-color: var(--accent-color);
+            color: var(--text-light);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .year-btn:hover {
+            background-color: var(--highlight-color);
+        }
+
+        .year-btn.active {
+            background-color: var(--highlight-color);
+        }
+
+        .content {
+            display: none;
+            background-color: var(--highlight-color);
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        ul{
+            padding: 15px;
+        }
+
+        @media (max-width: 480px) {
+    header {
+        font-size: 1.2rem;
+    }
+
+    .year-btn {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .content {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Environmental Laws in the Philippines: A Historical Timeline</h1>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <button class="year-btn" data-year="pre-1970s">Pre-1970s</button>
+                <div class="content" id="pre-1970s-content">
+                    <p>Early conservation efforts were largely piecemeal, focusing on specific resources (forestry, etc.) and often driven by economic rather than holistic environmental concerns. Lack of comprehensive legislation.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <button class="year-btn" data-year="1970s-1980s">1970s-1980s</button>
+                <div class="content" id="1970s-1980s-content">
+                    <p>Growing awareness of environmental issues led to the creation of the Department of Environment and Natural Resources (DENR) in 1978, marking a significant shift towards centralized environmental management. Specific events (e.g., pollution incidents, typhoons) likely influenced legislative action.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <button class="year-btn" data-year="1990s-2000s">1990s-2000s</button>
+                <div class="content" id="1990s-2000s-content">
+                    <p>Passage of more comprehensive laws addressing specific environmental challenges (air, water, waste, forestry). Increased international cooperation on environmental issues.</p>
+                    <ul>
+                        <li>Clean Air Act (RA 8749)</li>
+                        <li>Clean Water Act (RA 9275)</li>
+                        <li>Ecological Solid Waste Management Act (RA 9003)</li>
+                        <li>Forestry Reform Code (RA 8749)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <button class="year-btn" data-year="2010s-present">2010s-Present</button>
+                <div class="content" id="2010s-present-content">
+                    <p>Focus on enforcement, climate change adaptation, and integration of environmental considerations into various sectors. Landmark cases related to environmental damage set precedents.</p>
+                    <ul>
+                        <li>Climate Change Act (RA 9729)</li>
+                        <li>Increased emphasis on climate adaptation</li>
+                        <li>Landmark environmental legal cases</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const yearButtons = document.querySelectorAll('.year-btn');
+            
+            yearButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Toggle the content for the clicked button
+                    const year = button.dataset.year;
+                    const content = document.getElementById(`${year}-content`);
+                    
+                    // Toggle button and content active states
+                    button.classList.toggle('active');
+                    content.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
