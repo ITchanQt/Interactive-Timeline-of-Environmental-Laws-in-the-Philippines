@@ -170,6 +170,13 @@
             left: -6px;
         }
 
+        mark { 
+            background-color: var(--light-green); /* Change the background color */ 
+            color: var(--text-dark); /* Change the text color */ 
+            padding: 0.2em 0.4em; /* Add padding around the highlighted text */ 
+            border-radius: 0.2em; /* Round the corners */
+        }
+
         /* Animation */
         @keyframes fadeIn {
             from {
@@ -236,7 +243,7 @@
         <div class="timeline">
             <!-- Pre-1970s -->
             <div class="timeline-item">
-                <button class="year-btn" data-year="pre-1970s">Pre-1970s</button>
+                <button class="year-btn" data-year="pre-1970s"><mark>A. Major Milestone</mark><br><br>Pre-1970s</button>
                 <div class="content" id="pre-1970s-content">
                     <p>Early conservation efforts were largely piecemeal, focusing on specific resources (forestry, etc.) and often driven by economic rather than holistic environmental concerns. Lack of comprehensive legislation.</p>
                 </div>
@@ -244,7 +251,7 @@
 
             <!-- 1970s-1980s -->
             <div class="timeline-item">
-                <button class="year-btn" data-year="1970s-1980s">1970s-1980s</button>
+                <button class="year-btn" data-year="1970s-1980s"><mark>A. Major Milestone</mark><br><br>1970s-1980s</button>
                 <div class="content" id="1970s-1980s-content">
                     <p>Growing awareness of environmental issues led to the creation of the Department of Environment and Natural Resources (DENR) in 1978, marking a significant shift towards centralized environmental management.</p>
                 </div>
@@ -252,29 +259,66 @@
 
             <!-- 1990s-2000s -->
             <div class="timeline-item">
-                <button class="year-btn" data-year="1990s-2000s">1990s-2000s</button>
+                <button class="year-btn" data-year="1990s-2000s"><mark>A. Major Milestone</mark><br><br>1990s-2000s</button>
                 <div class="content" id="1990s-2000s-content">
-                    <p>Passage of comprehensive laws addressing air, water, and waste challenges.</p>
-                    <ul>
-                        <li>Clean Air Act (RA 8749)</li>
-                        <li>Clean Water Act (RA 9275)</li>
-                        <li>Ecological Solid Waste Management Act (RA 9003)</li>
-                    </ul>
+                    <p>Passage of comprehensive laws addressing air, water, and waste and forestry, with increased international cooperation.</p>
                 </div>
             </div>
 
             <!-- 2010s-Present -->
             <div class="timeline-item">
-                <button class="year-btn" data-year="2010s-present">2010s-Present</button>
+                <button class="year-btn" data-year="2010s-present"><mark>A. Major Milestone</mark><br><br>2010s-Present</button>
                 <div class="content" id="2010s-present-content">
-                    <p>Focus on enforcement, climate change adaptation, and legal precedents.</p>
-                    <ul>
-                        <li>Climate Change Act (RA 9729)</li>
-                        <li>Landmark environmental cases</li>
-                    </ul>
+                    <p>Focus on enforcement, climate change adaptation, and integration of environmental conservation into various sectors.</p>
+                </div>
+            </div>
+
+            <!-- Clean Air Act (RA 8749) -->
+            <div class="timeline-item">
+                <button class="year-btn" data-year="clean-air-act"><mark>B. Key Laws</mark><br><br>RA 8749</button>
+                <div class="content" id="clean-air-act-content">
+                    <p><b>Clean Air Act (RA 8749):</b><br>Aims to improve air quality by setting emission standards by standards and promoting cleaner technologies</p>
+                </div>
+            </div>
+
+            <!-- Clean Water Act (RA 9275) -->
+            <div class="timeline-item">
+                <button class="year-btn" data-year="clean-water-act"><mark>B. Key Laws</mark><br><br>RA 9275</button>
+                <div class="content" id="clean-water-act-content">
+                    <p><b>Clean Water Act (RA 9275):</b><br>Protect and improve water quality by regulating wastewater discharge.</p>
+                </div>
+            </div>
+
+            <!-- Ecological Solid Waste Management Act (RA 9003) -->
+            <div class="timeline-item">
+                <button class="year-btn" data-year="ecological-solid-waste-management-act"><mark>B. Key Laws</mark><br><br>RA 9003</button>
+                <div class="content" id="ecological-solid-waste-management-act-content">
+                    <p><b>Ecological Solid Waste Management Act (RA 9003):</b><br>Promote waste reduction and recycling, improving waste managment practices.</p>
+                </div>
+            </div>
+
+            <!-- Forestry Reform Code (RA 8749) -->
+            <div class="timeline-item">
+                <button class="year-btn" data-year="forestry-reform-code"><mark>B. Key Laws</mark><br><br>RA 8749</button>
+                <div class="content" id="forestry-reform-code-content">
+                    <p><b>Forestry Reform Code (RA 8749):</b><br>Aims for sustainable forest management and combats illegal logging.</p>
+                </div>
+            </div>
+
+             <!-- Climate Change Act (RA 9729) -->
+             <div class="timeline-item">
+                <button class="year-btn" data-year="climate-change-act"><mark>B. Key Laws</mark><br><br>RA 9729</button>
+                <div class="content" id="climate-change-act-content">
+                    <p><b>Climate Change Act (RA 9729):</b><br>Provides a framework for addressing climate change, including national adaptation and mitigation plans.</p>
                 </div>
             </div>
         </div>
+        <p style="text-align: center; font-size: 1rem; color: var(--text-dark); margin-bottom: 20px;">
+            Created by: <br>
+            <b>Aljhun V. Elizalde</b><br>
+            <b>Sandro P. Royandoyan</b><br>
+            <b>Maryjane M. Bacsal</b>
+        </p>
     </div>
 
     <script>
